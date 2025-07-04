@@ -1,6 +1,9 @@
+import { isAuthenticatedGuard } from '@/modules/auth/guards/is-authenticated.guard';
 import HomePage from '@/modules/landing/pages/HomePage.vue';
 import NotPage from '@/modules/landing/pages/NotPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
+
+// https://router.vuejs.org/guide/#Registering-the-router-plugin
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,7 +32,7 @@ const router = createRouter({
         {
           path: '/pokemon/:id',
           name: 'pokemon',
-          // beforeEnter: (to, from, next) => {
+          beforeEnter: [isAuthenticatedGuard],
           // props: true, // Enable route params as props
           props: (route) => {
             // console.log({ route });

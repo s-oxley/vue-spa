@@ -35,7 +35,8 @@
       </div>
       <!-- Login Button -->
       <button
-        type="submit"
+        @click="onLogin"
+        type="button"
         class="bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-md py-2 px-4 w-full"
       >
         Ingresar
@@ -47,3 +48,16 @@
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+//const route = useRoute();
+
+const onLogin = () => {
+  // Handle login logic here
+  localStorage.setItem('authentication', 'true'); // Simulate successful login
+  router.replace({ name: 'home' });
+};
+</script>
