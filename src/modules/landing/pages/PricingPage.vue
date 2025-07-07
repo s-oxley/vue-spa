@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center items-center">
-    <div class="">
-      <div class="text-center font-semibold">
+    <div>
+      <div class="text-center font-semibold mt-12">
         <h1 class="text-5xl">
           <span class="text-blue-700 tracking-wide">Flexible </span>
           <span>Plans</span>

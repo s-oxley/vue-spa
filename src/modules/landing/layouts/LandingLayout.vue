@@ -18,7 +18,16 @@
     <!-- Fin Header -->
 
     <!-- Main -->
-    <RouterView />
+    <div class="flex-1 overflow-y-auto">
+      <!-- <RouterView /> -->
+      <router-view v-slot="{ Component }">
+        <Transition name="fade" mode="out-in">
+          <keep-alive>
+            <component :is="Component" />
+          </keep-alive>
+        </Transition>
+      </router-view>
+    </div>
     <!-- Fin Main -->
 
     <!-- Footer -->
@@ -30,3 +39,15 @@
     <!-- Fin Footer -->
   </div>
 </template>
+
+<style lang="css" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

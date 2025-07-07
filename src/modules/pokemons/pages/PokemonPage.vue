@@ -1,6 +1,6 @@
 <template>
-  <section class="flex flex-col">
-    <h1 class="text-3xl font-semibold">
+  <div class="flex flex-col justify-center items-center">
+    <h1 class="text-3xl font-semibold mt-12">
       Pokemón<small class="text-blue-600"> # {{ id }}</small>
     </h1>
     <img
@@ -14,7 +14,7 @@
     >
       Next Pokémon
     </RouterLink>
-  </section>
+  </div>
 </template>
 
 <script lang="ts" setup>
