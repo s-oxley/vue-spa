@@ -8,7 +8,7 @@ export const isAuthenticatedGuard = (
   // Check if the user is authenticated
   const isAuthenticated = localStorage.getItem('authentication'); // Example check, replace with actual auth logic
 
-  console.log('Authenticated: ', isAuthenticated);
+  // console.log('Authenticated: ', isAuthenticated);
 
   if (isAuthenticated === 'true') {
     next(); // Allow access to the route

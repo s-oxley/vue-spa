@@ -12,13 +12,13 @@
         <RouterLink to="/features" class="text-gray-700 hover:text-gray-900">Features</RouterLink>
         <RouterLink to="/pricing" class="text-gray-700 hover:text-gray-900">Pricing</RouterLink>
         <RouterLink to="/contact" class="text-gray-700 hover:text-gray-900">Contact</RouterLink>
-        <RouterLink to="/pokemon/2" class="text-gray-700 hover:text-gray-900">Pokemon</RouterLink>
+        <RouterLink to="/pokemon/1" class="text-gray-700 hover:text-gray-900">Pokemon</RouterLink>
       </nav>
     </header>
     <!-- Fin Header -->
 
     <!-- Main -->
-    <div class="flex-1 overflow-y-auto">
+    <main class="flex-1 overflow-y-auto">
       <!-- <RouterView /> -->
       <router-view v-slot="{ Component }">
         <Transition name="fade" mode="out-in">
@@ -27,7 +27,7 @@
           </keep-alive>
         </Transition>
       </router-view>
-    </div>
+    </main>
     <!-- Fin Main -->
 
     <!-- Footer -->
